@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta http-equiv="refresh" content="0; url=budgetapp://nordigen">
+    <title>Redirecting...</title>
+    <script>
+      window.onload = function () {
+        // Extract the full query string, e.g., "?ref=...&foo=bar"
+        const queryString = window.location.search;
+
+        // Append it to your custom scheme URI
+        const deepLink = `budgetapp://nordigen${queryString}`;
+
+        // Redirect to the app
+        window.location.href = deepLink;
+      };
+    </script>
   </head>
   <body>
-    <p>Redirecting to the app...</p>
+    <p>Redirecting to the app with all parameters...</p>
   </body>
 </html>
